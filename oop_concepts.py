@@ -28,3 +28,13 @@ class rectangle:
 r=rectangle(2,3)
 r.area()
 r.perimeter()
+
+#program 4:
+class employee:
+    def __init__(self,name,salary):
+        self.name=name
+        self.salary=salary
+    def display(self):
+        print(f"Name:{self.name}\nSalary:{self.salary}")
+e1=employee("harsha",20000)
+e1.display()
