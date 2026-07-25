@@ -38,3 +38,28 @@ class employee:
         print(f"Name:{self.name}\nSalary:{self.salary}")
 e1=employee("harsha",20000)
 e1.display()
+
+#program 3:
+class bankaccount:
+    def __init__(self,account_holder,account_number,balance):
+        self.account_holder=account_holder
+        self.account_number=account_number
+        self.balance=balance
+        
+    def deposit(self):
+        deposit_amount=int(input("enter deposit amount:"))
+        self.balance+=deposit_amount
+    def withdraw(self):
+        amount=int(input("enter the withdraw amount:"))
+        if amount<=self.balance:
+            self.balance-=amount
+        else:
+            print("insufficient balance")
+    def display(self):
+        print("Account holder:",self.account_holder)
+        print("Account number:",self.account_number)
+        print("balance:",self.balance)
+a=bankaccount("harsha",1234,1000)
+a.deposit()
+a.withdraw()
+a.display()
