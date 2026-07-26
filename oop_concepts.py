@@ -63,3 +63,27 @@ a=bankaccount("harsha",1234,1000)
 a.deposit()
 a.withdraw()
 a.display()
+
+#program 5:
+class library:
+    def __init__(self,library_name,location,total_books):
+        self.library_name=library_name
+        self.location=location
+        self.total_books= total_books
+    def add(self):
+        n=int(input("enter the number of books to return back:"))
+        self.total_books+=n
+    def remove(self):
+        n=int(input("number books going out:"))
+        self.total_books-=n
+    def display(self):
+        print("Library name:",self.library_name)
+        print("Location:",self.location)
+        print("Total number of books:",self.total_books)
+b=library("central library","banglore",20)
+b.add()
+b.remove()
+b.display()
+
+
+
