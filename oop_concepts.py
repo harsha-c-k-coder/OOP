@@ -85,5 +85,26 @@ b.add()
 b.remove()
 b.display()
 
+#program 6:
+class person:
+    def __init__(self,name,age):
+        self.age=age
+        self.name=name
+    def display(self):
+        print("Name:",self.name)
+        print("Age:",self.age)
+class student(person):
+    def __init__(self,name,age,id,course):
+        super().__init__(name,age)
+        self.id=id
+        self.course=course
+    def display(self):
+        super().display()
+        print("student id:",self.id)
+        print("student course:",self.course)
+s=student("harsha",19,101,"CS")
+s.display()
+
+
 
 
